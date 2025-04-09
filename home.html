@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          width: 100%;
+        }
+        
+        #container{
+            font-family: 'Rufina', 'Noto Sans TC';
+            width: 100vw;
+            color: black;
+        }
+
+        header{
+            text-align: center;
+        }
+
+        nav{
+            background-color: black;
+            display: block;
+            padding: 0 50px;
+            font-size: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        #title {
+            background-image: url(media/bg.png);
+            background-size: contain; /* or 80% if you want */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            width: 100vw;
+
+            /* Flexbox Centering */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* center vertically */
+            align-items: center;     /* center horizontally */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #title h1{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family:'Rufina';
+            font-size: 28px;
+            margin-top: 70px;
+        }
+
+        #title p{
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        #video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #video video {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-bottom: 100px;
+        }
+
+        #knowledge{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #knowledge h1{
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #knowledge p {
+            text-align: left;
+            margin: 10px auto;
+            max-width: 800px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 100;
+            line-height: 2;
+        }
+
+        #problems {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #problems h2 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .problems-list {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .problem-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .problem-title {
+            width: 20%;
+            font-weight: bold;
+            text-align: left;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .problem-description {
+            width: 65%;
+            text-align: left;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #help{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        footer{
+            text-align: left;
+            margin-left: 80px;
+            color: white;
+            margin-top: 70px;
+            padding-bottom: 100px;
+        }
+
+        footer img{
+            width: 80px;
+            height: auto;
+        }
+
+        footer p{
+            line-height: 2;
+        }
+
+    </style>
+</head>
+
+<div id="container" style="background-color: black;">
+    <header>
+        <a href ="home.html"><img src="media/full.png" alt="" width=320px></a>
+    </header>
+<div id="nav" style="background-color: black;">
+    <nav class="navbar"  style="background-color: black;">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li style="opacity: 40%;"><a href="products.html">Products</a></li>
+            <li style="opacity: 40%;"><a href="aboutus.html">About Us</a></li>
+          </ul>
+    </nav>
+</div>
+<br>
+<div id="title"><br>
+    <h1>
+        social anxiety
+    </h1>
+    <p>
+        a long term and overwhelming fear of social situations.<br>
+        對社交場合的長期且壓倒性的恐懼。
+    </p> <br> <br><br><br><br>
+</div>
+<div id="video"><br><br><br><br>
+    <video autoplay muted loop width="50vw">
+        <source src="media/campaign vid.mp4" type="video/mp4">
+    </video><br><br>
+</div>
+<div id="knowledge">
+    <h1>
+        社交恐懼是什麼？
+    </h1><br><br>
+    <p>
+        社交恐懼（Social Anxiety Disorder, SAD）是一種心理狀態，指個體在社交場合中感到極度焦慮、不安或害怕被他人評價。這可能導致他們避免社交活動，甚至影響日常生活和職場表現。
+
+根據研究，全球約 7-13% 的人一生中曾經歷社交焦慮症，其中約 2-3% 的人會受到嚴重影響，無法正常參與社交活動。這代表社恐並不是少數人的問題，而是值得被理解與關注的社會現象。
+    </p>
+</div><br>
+
+<section id="problems">
+    <h2>社恐人士遇到的問題</h2><br>
+    <div class="problems-list">
+        <div class="problem-item">
+            <div class="problem-title">害怕被關注</div>
+            <div class="problem-description">在公共場合時，會擔心別人注意自己的行為，甚至感到壓迫。</div>
+        </div>
+        <div class="problem-item">
+            <div class="problem-title">難以開啟對話</div>
+            <div class="problem-description">即使是日常交流，如點餐或詢問路線，也可能感到壓力。</div>
+        </div>
+        <div class="problem-item">
+            <div class="problem-title">迴避社交場合</div>
+            <div class="problem-description">可能會刻意避免聚會、活動或需要互動的場景。</div>
+        </div>
+        <div class="problem-item">
+            <div class="problem-title">身體反應強烈</div>
+            <div class="problem-description">出現心跳加速、臉紅、手抖、出汗等生理反應。</div>
+        </div>
+        <div class="problem-item">
+            <div class="problem-title">影響學業與職場</div>
+            <div class="problem-description">害怕公開發表意見，難以與同事或同學建立關係。</div>
+        </div>
+    </div>
+</section>
+<div id="help">
+    <h1>
+        我們要怎麼幫助社恐人士
+    </h1><br>
+    <h3>
+        提供安全感<br></h3>
+        <p>
+        不強迫社交，讓他們有自主選擇互動的空間。
+        </p><br>
+    <h3>
+        減少評價壓力<br></h3>
+        <p>
+        避免過度關注或評論社恐人士的行為與表現。
+        </p><br>
+    <h3>
+        使用社交輔助設計<br></h3>
+        <p>
+        透過創新設計，如可穿戴裝置 ，幫助社恐人士適應社會環境。
+    </p><br>
+    <h3>
+        提高大眾理解<br></h3>
+        <p>
+        透過教育與討論，讓更多人瞭解社交恐懼，減少誤解與偏見。
+    </p><br>
+</div><br>
+<footer>
+    <img src="media/OBSCURA IG.png">
+    <p>
+        IG: @obscura_untouchable <br>
+        元智大學資訊傳播系第28屆畢業展覽 <br>
+        4/7 - 4/12 元智大學校內展 <br>
+        4/25 - 4/28 松山文創園區
+    </p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</html>

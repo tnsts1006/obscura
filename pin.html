@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          width: 100%;
+        }
+
+        #container{
+            font-family: 'Rufina', 'Noto Sans TC';
+            width: 100%;
+            color: black;
+        }
+
+        header{
+            text-align: center;
+        }
+
+        #icon img{
+            width: 24px;
+            margin-left: 80px;
+        }
+
+        #title {
+            position: relative; /* make #title a container for absolute positioning */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #title img{
+            width: 80%;
+        }
+
+        #title h1{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family:'Rufina', sans-serif;
+            font-size: 32px;
+        }
+
+        #title h2{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family:'Rufina', sans-serif;
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        #title h3{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+            font-family:'Rufina', sans-serif;
+            font-size: 28px;
+            font-weight: 100;
+        }
+
+        #title p{
+            text-align: left;
+            margin: 10px auto;
+            max-width: 800px;
+            font-family: 'Rufina', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 100;
+            line-height: 2;
+            color: white;
+            font-size: 20px;
+        }
+
+        #icon img{
+            width: 18px;
+        }
+
+        #model{
+            display: flex;
+            justify-content: center; /* Center them nicely */
+            align-items: center;
+            gap: 20px; /* space between photos */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #model img{
+            aspect-ratio: 3/4; /* force 3:4 ratio */
+            width: 45%;
+            object-fit: cover;
+        }
+
+        .photo-left, .photo-right {
+            object-fit: cover; /* optional if you want clean crop */
+        }
+
+        video {
+            margin-left: 50vw;
+            transform: translate(-50%);
+            margin-bottom: 50px;
+        }
+
+        footer{
+            text-align: left;
+            margin-left: 80px;
+            color: white;
+            margin-top: 70px;
+            padding-bottom: 100px;
+        }
+
+        footer img{
+            width: 80px;
+            height: auto;
+        }
+
+        footer p{
+            line-height: 2;
+        }
+
+    </style>
+</head>
+
+<div id="container" style="background-color: black;">
+    <header>
+        <a href ="home.html"><img src="media/full.png" alt="" width=320px></a>
+    </header>
+<div id="title"><br>
+    <div id="icon">
+        <a href="products.html">
+            <img src="media/chevron.png"></a>
+    </div>
+    <h1>
+        不好意思 我先離開
+    </h1>
+    <h2>「用空間換取時間」</h2><br><br>
+    <img src="media/product/hengpin.png"><br><br>
+    <h3>concept</h3>
+    <p>
+        當你按下終極脫身胸章，它會立刻掉落地面，讓你有藉口蹲下撿起，
+完美打斷對話節奏，利用創造脫身的空間，換得度秒如年的時間。
+    </p> <br> <br><br><br><br>
+</div>
+<div id="model">
+    <img src="media/model/pin1.jpg" class="photo-left" style="width: 36%;">
+    <img src="media/model/pin2.jpg" class="photo-right" style="width: 36%;">
+</div>
+
+<div id="video"><br><br><br><br>
+    <video width="70%", height="auto" autoplay muted loop>
+        <source src="media/animation/pin.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video><br>
+</div>
+
+<footer>
+    <img src="media/OBSCURA IG.png">
+    <p>
+        IG: @obscura_untouchable <br>
+        元智大學資訊傳播系第28屆畢業展覽 <br>
+        4/7 - 4/12 元智大學校內展 <br>
+        4/25 - 4/28 松山文創園區
+    </p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</html>
