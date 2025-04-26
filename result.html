@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>測驗結果</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, black 200px, #333333);
+      color: white;
+      font-family: 'Rufina', 'Noto Sans TC', sans-serif;
+      text-align: center;
+      padding: 50px 0;
+      height: 100%;
+    }
+
+    .score {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .result {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      padding: 10px 20px;
+      font-size: 20px;
+      border: none;
+      background: white;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<header>
+    <a href ="index.html"><img src="media/full.png" alt="" width=320px></a>
+</header>
+<body>
+  <h1>你的社交焦慮測驗結果</h1>
+  <div class="result" id="resultText">正在分析中...</div>
+<br><br>
+  <button class="back-btn" onclick="goBack()">回到首頁</button>
+
+  <script>
+    const score = parseInt(localStorage.getItem('LSAS_score'));
+    let result = '';
+  
+    if (!score && score !== 0) {
+      document.getElementById('resultText').innerText = '請先完成測驗！';
+    } else {
+      if (score <= 7) {
+        result = '正常範圍｜社交自在無礙';
+      } else if (score <= 14) {
+        result = '輕度焦慮｜偶爾緊張仍可自如';
+      } else if (score <= 22) {
+        result = '中度焦慮｜影響生活，建議調整';
+      } else {
+        result = '嚴重焦慮｜建議再測 LSAS 完整版';
+      }
+  
+      document.getElementById('resultText').innerHTML = `
+        <div class="score">${score}</div>
+        <div>${result}</div>
+      `;
+    }
+  
+    // ✅ move this OUTSIDE the if block!
+    function goBack() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

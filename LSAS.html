@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          width: 100%;
+        }
+        
+        #container{
+            font-family: 'Rufina', 'Noto Sans TC';
+            width: 100vw;
+            color: white;
+        }
+
+        header{
+            text-align: center;
+        }
+
+        nav{
+            background-color: black;
+            display: block;
+            padding: 0 50px;
+            font-size: 20px;
+        }
+        /* ------------------------------
+           Default (Laptop/Desktop)
+           ≥ 1025px
+        ------------------------------ */
+        nav ul {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: nowrap;
+          list-style: none;
+          padding: 10px 0;
+          margin: 0;
+        }
+        
+        nav li {
+          padding: 0;
+        }
+        
+        nav a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 10px 15px;
+          display: block;
+        }
+        
+        
+        /* ------------------------------
+           Tablet (641px–1024px)
+        ------------------------------ */
+        @media (max-width: 1024px) and (min-width: 641px) {
+          nav ul {
+            gap: 24px;
+          }
+      
+          nav a {
+            font-size: 16px;
+            padding: 8px 12px;
+          }
+        }
+        
+        
+        /* ------------------------------
+           Phone (≤ 640px)
+        ------------------------------ */
+        @media (max-width: 640px) {
+          nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+          }
+      
+          nav a {
+            font-size: 14px;
+            padding: 6px 0;
+          }
+        }
+
+        #knowledge{
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #knowledge h1{
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #knowledge p {
+            text-align: left;
+            margin: 10px auto;
+            max-width: 800px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 100;
+            line-height: 2;
+        }
+
+        #scoring {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #scoring h2 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .scoring-list {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .scoring-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            margin-left: 120px;
+        }
+
+        .scoring-title {
+            width: 20%;
+            font-weight: bold;
+            text-align: left;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .scoring-description {
+            width: 65%;
+            text-align: left;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        #quizForm {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #quiz h2 {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .question-wrap {
+          width: 90%;
+          max-width: 900px;
+          margin: 0 auto;
+          text-align: left;
+        }
+
+        .question {
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 40px;
+        }
+
+        .question-text {
+          font-size: 18px;
+          line-height: 1.6;
+          width: 60%;
+        }
+
+        .options {
+          display: flex;
+          gap: 10px;
+        }
+
+        /* ✅ 手機版響應式：垂直排列 */
+        @media (max-width: 640px) {
+          .question {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+      
+          .question-text {
+            width: 100%;
+          }
+      
+          .options {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+          }
+        }
+
+
+        .option-btn {
+          border: 1px solid white;
+          background: black;
+          color: white;
+          padding: 10px 15px;
+          cursor: pointer;
+          font-size: 18px;
+          min-width: 50px;
+          width: 50px;
+          text-align: center;
+        }
+        .option-btn.selected {
+          background: white;
+          color: black;
+        }
+        button.submit-btn {
+          margin-top: 30px;
+          padding: 10px 20px;
+          font-size: 20px;
+          border: none;
+          background: white;
+          color: black;
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        footer{
+            text-align: left;
+            margin-left: 80px;
+            color: white;
+            margin-top: 70px;
+            padding-bottom: 100px;
+        }
+
+        footer img{
+            width: 80px;
+            height: auto;
+        }
+
+        footer p{
+            line-height: 2;
+        }
+
+    </style>
+</head>
+
+<div id="container" style="background-color: black;">
+    <header>
+        <a href ="index.html"><img src="media/full.png" alt="" width=320px></a>
+    </header>
+<div id="nav" style="background-color: black;">
+    <nav class="navbar"  style="background-color: black;">
+        <ul>
+            <li><a style="opacity: 40%;" href="index.html">Home</a></li>
+            <li style="opacity: 40%;"><a href="products.html">Products</a></li>
+            <li ><a href="LSAS.html">LSAS</a></li>
+            <li style="opacity: 40%;"><a href="aboutus.html">About Us</a></li>
+          </ul>
+    </nav>
+</div>
+<br>
+<div id="knowledge">
+    <h1>
+        李氏社交焦慮量表 LSAS
+    </h1><br>
+    <p>
+        LSAS（Liebowitz Social Anxiety Scale）簡介
+LSAS 是由美國精神科醫師 Michael Liebowitz 在1987年開發的社交焦慮量表，主要用來評估個體在社交互動與表現情境中的焦慮程度與迴避行為。
+量表共有 24個情境題目，每個情境都需要分別針對焦慮程度與迴避頻率作答，各自以0到3分計分。
+<br>
+焦慮程度：從「完全不焦慮」到「極度焦慮」
+<br>
+迴避頻率：從「從不避免」到「總是避免」
+<br>
+最終會計算出一個總分（最高為 144分），依分數範圍來判定社交焦慮的嚴重程度。
+    </p>
+    <br>
+    <p>
+        這是一份改編自李波維茲社交焦慮量表（Liebowitz Social Anxiety Scale, LSAS）的簡化版測驗，
+透過日常生活中常見的10個情境，快速了解自己在社交互動中的不安程度。
+    </p>
+</div><br>
+
+<section id="scoring">
+    <h2>簡化版 LSAS 測驗的分類說明</h2><br>
+    <div class="scoring-list">
+        <div class="scoring-item">
+            <div class="scoring-title">0-7分</div>
+            <div class="scoring-description">正常範圍｜社交自在無礙
+            </div>
+        </div>
+        <div class="scoring-item">
+            <div class="scoring-title">8-14分</div>
+            <div class="scoring-description">輕度焦慮｜偶爾緊張仍可自如</div>
+        </div>
+        <div class="scoring-item">
+            <div class="scoring-title">15-22分</div>
+            <div class="scoring-description">中度焦慮｜影響生活，建議調整</div>
+        </div>
+        <div class="scoring-item">
+            <div class="scoring-title">23-30分</div>
+            <div class="scoring-description">嚴重焦慮｜建議再測LSAS完整版</div>
+        </div>
+    </div>
+</section>
+
+<section id="quiz">
+    <h2>簡化版社交焦慮測驗 (LSAS)</h2>
+    <br>
+    <form id="quizForm">
+      <!-- 題目會自動生成 -->
+    </form>
+  
+    <button type="button" class="submit-btn" onclick="calculateScore()">計算總分</button>
+  </section>
+  <script>
+    const questions = [
+      "1. 上台公開講話",
+      "2. 向陌生人介紹自己",
+      "3. 在餐廳單獨用餐",
+      "4. 在團體中發言",
+      "5. 被多人注視時走路",
+      "6. 打電話給不熟的人",
+      "7. 拒絕別人的請求",
+      "8. 與重要人物（老師、上司）對話",
+      "9. 與人眼神接觸",
+      "10. 在聚會場合認識新朋友"
+    ];
+    
+    const form = document.getElementById('quizForm');
+    
+    // 生成題目
+    questions.forEach((q, index) => {
+      const wrapDiv = document.createElement('div');
+      wrapDiv.className = 'question-wrap';
+    
+      const qDiv = document.createElement('div');
+      qDiv.className = 'question';
+    
+      const questionText = document.createElement('div');
+      questionText.className = 'question-text';
+      questionText.innerText = q;
+    
+      const optionsDiv = document.createElement('div');
+      optionsDiv.className = 'options';
+    
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'option-btn';
+        btn.innerText = i;
+        btn.dataset.question = 'q' + (index + 1);
+        btn.dataset.value = i;
+    
+        btn.addEventListener('click', function () {
+          const siblings = document.querySelectorAll(`[data-question="q${index + 1}"]`);
+          siblings.forEach(sib => sib.classList.remove('selected'));
+          btn.classList.add('selected');
+        });
+    
+        optionsDiv.appendChild(btn);
+      }
+    
+      qDiv.appendChild(questionText);
+      qDiv.appendChild(optionsDiv);
+      wrapDiv.appendChild(qDiv);
+      form.appendChild(wrapDiv);
+    });
+    
+    // 🔥 When clicking "計算總分" button
+    function calculateScore() {
+      let total = 0;
+      for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`.option-btn.selected[data-question="q${i}"]`);
+        if (selected) {
+          total += parseInt(selected.dataset.value);
+        } else {
+          alert('請回答第 ' + i + ' 題');
+          return;
+        }
+      }
+    
+      // ✅ Save to localStorage
+      localStorage.setItem('LSAS_score', total);
+    
+      // ✅ Redirect to result.html
+      window.location.href = 'result.html';
+    }
+    </script>
+
+
+
+<footer>
+    <img src="media/OBSCURA IG.png">
+    <p>
+        IG: @obscura_untouchable <br>
+        元智大學資訊傳播系第28屆畢業展覽 <br>
+        4/7 - 4/12 元智大學校內展 <br>
+        4/25 - 4/28 松山文創園區
+    </p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</html>
