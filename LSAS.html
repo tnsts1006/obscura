@@ -140,13 +140,29 @@
         }
 
         .scoring-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            margin-left: 120px;
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .scoring-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  .scoring-title,
+  .scoring-description {
+    width: 100%;
+  }
+}
+
+
 
         .scoring-title {
             width: 20%;
@@ -218,7 +234,6 @@
           }
         }
 
-
         .option-btn {
           border: 1px solid white;
           background: black;
@@ -230,6 +245,7 @@
           width: 50px;
           text-align: center;
         }
+
         .option-btn.selected {
           background: white;
           color: black;
@@ -264,6 +280,59 @@
             line-height: 2;
         }
 
+        @media (max-width: 640px) {
+          /* Fix for knowledge section padding */
+          #knowledge {
+            padding: 0 16px;
+          }
+      
+          #knowledge p {
+            font-size: 14px;
+            line-height: 1.8;
+          }
+      
+          #knowledge h1 {
+            font-size: 20px;
+            margin-top: 20px;
+          }
+      
+          #knowledge p{
+            margin-left: 40px;
+            margin-right: 40px;
+          }
+      
+          /* Scoring section stacking layout */    
+          #scoring{
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          #scoring h2 {
+            font-size: 20px;
+          }
+      
+          .scoring-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 0 20px;
+        }
+        
+        .scoring-title,
+        .scoring-description {
+          width: 100%;
+          font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        #quiz h2 {
+            font-size: 20px;
+        }
+        footer{
+                    font-size: 14px;
+                    margin-left: 25px;
+                  }
+        }
     </style>
 </head>
 
@@ -345,7 +414,7 @@ LSAS 是由美國精神科醫師 Michael Liebowitz 在1987年開發的社交焦�
       "2. 向陌生人介紹自己",
       "3. 在餐廳單獨用餐",
       "4. 在團體中發言",
-      "5. 被多人注視時走路",
+      "5. 走路時被多人注視",
       "6. 打電話給不熟的人",
       "7. 拒絕別人的請求",
       "8. 與重要人物（老師、上司）對話",
