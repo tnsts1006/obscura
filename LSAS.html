@@ -338,7 +338,7 @@
               word-break: break-word;
               overflow-wrap: break-word;
             }
-            
+
       
           #knowledge h1 {
             font-size: 20px;
@@ -490,22 +490,23 @@ LSAS 是由美國精神科醫師 Michael Liebowitz 在1987年開發的社交焦�
       const optionsDiv = document.createElement('div');
       optionsDiv.className = 'options';
     
-      for (let i = 1; i <= 4; i++) {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'option-btn';
-        btn.innerText = i;
-        btn.dataset.question = 'q' + (index + 1);
-        btn.dataset.value = i;
-    
-        btn.addEventListener('click', function () {
-          const siblings = document.querySelectorAll(`[data-question="q${index + 1}"]`);
-          siblings.forEach(sib => sib.classList.remove('selected'));
-          btn.classList.add('selected');
-        });
-    
-        optionsDiv.appendChild(btn);
-      }
+      for (let i = 0; i <= 4; i++) { // start from 0
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'option-btn';
+  btn.innerText = i;
+  btn.dataset.question = 'q' + (index + 1);
+  btn.dataset.value = i;
+
+  btn.addEventListener('click', function () {
+    const siblings = document.querySelectorAll(`[data-question="q${index + 1}"]`);
+    siblings.forEach(sib => sib.classList.remove('selected'));
+    btn.classList.add('selected');
+  });
+
+  optionsDiv.appendChild(btn);
+}
+
     
       qDiv.appendChild(questionText);
       qDiv.appendChild(optionsDiv);
